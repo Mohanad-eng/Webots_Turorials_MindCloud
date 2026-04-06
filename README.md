@@ -17,7 +17,7 @@ This repo contains projects and guide for beginners in webots simulation program
      
      ``webots``
      
-* TroubleShooting for ininstalling :
+* TroubleShooting for Uninstalling :
   
     ``sudo snap remove webots``
 # Second The First tutorial : 
