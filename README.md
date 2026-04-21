@@ -92,7 +92,7 @@ This repo contains projects and guide for beginners in webots simulation program
 
   Here is a video demo for all this :
 
-  ![]()
+  [Click to watch the Screencast](./Screencast%20from%202026-04-21%2006-50-04.webm)
 
   
 
