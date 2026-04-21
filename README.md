@@ -52,7 +52,7 @@ This repo contains projects and guide for beginners in webots simulation program
 
  -----
  
-# The First tutorial📁(Running the simulation for the Nexsuis Rover (New Rover)🏁) :
+# The First tutorial📁(Running the simulation for the Nexus Rover (New Rover)🏁) :
 
   Open your **Terminal** :
   
@@ -60,9 +60,10 @@ This repo contains projects and guide for beginners in webots simulation program
 
   ``source install/setup.bash``
   
-  ``ros2 launch webots_pkg_sim sim_rover_launch.py``
+  ``ros2 launch webots_pkg_sim swerve.launch.py``
 
   This will open the **Simulation**
+  If you encounter any errors, change the path in the wbt files to your preferred path.
 
   Now you have the Simulation opened in **Webots**
 
