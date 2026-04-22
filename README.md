@@ -67,7 +67,8 @@ This repo contains projects and guide for beginners in webots simulation program
 
   Now you have the Simulation opened in **Webots**
 
-![](<>)
+![](<Screenshot from 2026-04-22 07-13-18.png>)
+
   Let's run the rover 🎮 !
 
   in another **Terminal** :
