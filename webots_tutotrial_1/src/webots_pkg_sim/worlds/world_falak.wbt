@@ -1,0 +1,235 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      coulombFriction 3.0
+      bounce 0.5
+      bounceVelocity 0.01
+    }
+  ]
+}
+
+Viewpoint {
+  orientation -0.3 0.9 0.3 1.2
+  position -3 -2 3
+}
+
+TexturedBackground {}
+TexturedBackgroundLight {}
+
+RectangleArena {
+  floorSize 10 10
+  floorMaterial "ground"
+}
+
+# ================= ROBOT =================
+Robot {
+  name "falak"
+  controller "<extern>"
+  translation 0 0 0.5
+  supervisor TRUE
+  synchronization TRUE
+
+  children [
+
+    # ================= BASE =================
+    Shape {
+      castShadows FALSE
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.8
+        roughness 0.5
+        metalness 0.2
+      }
+      geometry Mesh {
+        url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes_1/base_link.STL"
+      }
+    }
+
+    InertialUnit { name "imu" }
+    GPS { name "gps" }
+
+    Camera {
+      name "camera"
+      translation 0.4 0 0.15
+      width 640
+      height 480
+    }
+
+    RangeFinder {
+      name "depth"
+      translation 0.4 0 0.15
+      width 320
+      height 240
+      maxRange 10
+    }
+
+    # ================= WHEELS =================
+
+    # FRONT LEFT
+# WHEEL 1 (Front Left)
+HingeJoint {
+  jointParameters HingeJointParameters {
+    axis 0 1 0
+    anchor -0.37409 -0.2862 0.0065869
+  }
+  device [ RotationalMotor { name "wheel1_joint" maxVelocity 20 } ]
+  endPoint Solid {
+    name "wheel1"
+    translation -0.37409 -0.2862 0.0065869
+    children [
+      Shape {
+        appearance PBRAppearance { baseColor 0.1 0.1 0.1 }
+        geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes_1/wheel1_link.STL" }
+      }
+    ]
+    boundingObject Cylinder { radius 0.08 height 0.1 }
+    physics Physics {
+      mass 4.0722
+      density -1
+      inertiaMatrix [0.01 0 0, 0 0.01 0, 0 0 0.02]
+      contactMaterial "wheel"
+    }
+  }
+}
+
+# WHEEL 2 (Center Left)
+HingeJoint {
+  jointParameters HingeJointParameters {
+    axis 0 1 0
+    anchor 0.0007144 -0.2862 0.0065869
+  }
+  device [ RotationalMotor { name "wheel2_joint" maxVelocity 20 } ]
+  endPoint Solid {
+    name "wheel2"
+    translation 0.0007144 -0.2862 0.0065869
+    children [
+      Shape {
+        appearance PBRAppearance { baseColor 0.1 0.1 0.1 }
+        geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes_1/wheel2_link.STL" }
+      }
+    ]
+    boundingObject Cylinder { radius 0.08 height 0.1 }
+    physics Physics {
+      mass 4.0722
+      density -1
+      inertiaMatrix [0.01 0 0, 0 0.01 0, 0 0 0.02]
+      contactMaterial "wheel"
+    }
+  }
+}
+
+# WHEEL 3 (Rear Left)
+HingeJoint {
+  jointParameters HingeJointParameters {
+    axis 0 1 0
+    anchor 0.41961 -0.2862 0.0065869
+  }
+  device [ RotationalMotor { name "wheel3_joint" maxVelocity 20 } ]
+  endPoint Solid {
+    name "wheel3"
+    translation 0.41961 -0.2862 0.0065869
+    children [
+      Shape {
+        appearance PBRAppearance { baseColor 0.1 0.1 0.1 }
+        geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes_1/wheel3_link.STL" }
+      }
+    ]
+    boundingObject Cylinder { radius 0.08 height 0.1 }
+    physics Physics {
+      mass 4.0722
+      density -1
+      inertiaMatrix [0.01 0 0, 0 0.01 0, 0 0 0.02]
+      contactMaterial "wheel"
+    }
+  }
+}
+
+# WHEEL 4 (Rear Right)
+HingeJoint {
+  jointParameters HingeJointParameters {
+    axis 0 1 0
+    anchor 0.41816 0.2862 0.0058533
+  }
+  device [ RotationalMotor { name "wheel4_joint" maxVelocity 20 } ]
+  endPoint Solid {
+    name "wheel4"
+    translation 0.41816 0.2862 0.0058533
+    children [
+      Shape {
+        appearance PBRAppearance { baseColor 0.1 0.1 0.1 }
+        geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes_1/wheel4_link.STL" }
+      }
+    ]
+    boundingObject Cylinder { radius 0.08 height 0.1 }
+    physics Physics {
+      mass 4.0722
+      density -1
+      inertiaMatrix [0.01 0 0, 0 0.01 0, 0 0 0.02]
+      contactMaterial "wheel"
+    }
+  }
+}
+
+# WHEEL 5 (Center Right)
+HingeJoint {
+  jointParameters HingeJointParameters {
+    axis 0 1 0
+    anchor -0.0007144 0.2862 0.0099132
+  }
+  device [ RotationalMotor { name "wheel5_joint" maxVelocity 20 } ]
+  endPoint Solid {
+    name "wheel5"
+    translation -0.0007144 0.2862 0.0099132
+    children [
+      Shape {
+        appearance PBRAppearance { baseColor 0.1 0.1 0.1 }
+        geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes_1/wheel5_link.STL" }
+      }
+    ]
+    boundingObject Cylinder { radius 0.08 height 0.1 }
+    physics Physics {
+      mass 4.0722
+      density -1
+      inertiaMatrix [0.01 0 0, 0 0.01 0, 0 0 0.02]
+      contactMaterial "wheel"
+    }
+  }
+}
+
+# WHEEL 6 (Front Right)
+HingeJoint {
+  jointParameters HingeJointParameters {
+    axis 0 1 0
+    anchor -0.37192 0.2862 0.0035268
+  }
+  device [ RotationalMotor { name "wheel6_joint" maxVelocity 20 } ]
+  endPoint Solid {
+    name "wheel6"
+    translation -0.37192 0.2862 0.0035268
+    children [
+      Shape {
+        appearance PBRAppearance { baseColor 0.1 0.1 0.1 }
+        geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes_1/wheel6_link.STL" }
+      }
+    ]
+    boundingObject Cylinder { radius 0.08 height 0.1 }
+    physics Physics {
+      mass 4.0722
+      density -1
+      inertiaMatrix [0.01 0 0, 0 0.01 0, 0 0 0.02]
+      contactMaterial "wheel"
+    }
+  }
+}
+
+  ]
+
+  boundingObject Box { size 0.8 0.6 0.2 }
+  physics Physics { mass 17 }
+}

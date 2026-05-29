@@ -1,0 +1,38 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    steering1_controller:
+      type: position_controllers/JointPositionController
+      joint: steering1_joint
+
+    steering2_controller:
+      type: position_controllers/JointPositionController
+      joint: steering2_joint
+
+    steering3_controller:
+      type: position_controllers/JointPositionController
+      joint: steering3_joint
+
+    steering4_controller:
+      type: position_controllers/JointPositionController
+      joint: steering4_joint
+
+    wheel1_controller:
+      type: velocity_controllers/JointVelocityController
+      joint: wheel1_joint
+
+    wheel2_controller:
+      type: velocity_controllers/JointVelocityController
+      joint: wheel2_joint
+
+    wheel3_controller:
+      type: velocity_controllers/JointVelocityController
+      joint: wheel3_joint
+
+    wheel4_controller:
+      type: velocity_controllers/JointVelocityController
+      joint: wheel4_joint

@@ -1,0 +1,549 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/UnevenTerrain.proto"
+
+
+ContactProperties {
+  material1 "rover_wheel"
+  coulombFriction [ 2.0 ]
+  softCFM 0.01
+  softERP 0.2
+}
+
+Viewpoint {
+  orientation -0.32 0.92 0.21 1.15
+  position -5.5 -3.0 2.8
+}
+
+TexturedBackground {
+  texture "noon_cloudy_empty"
+}
+TexturedBackgroundLight {
+  texture "noon_cloudy_empty"
+}
+
+UnevenTerrain {
+  translation 0 0 0
+
+  # Harsh, jagged desert terrain with sudden elevation jumps
+  size 40 40 14.0
+
+  # High density for sharp features and jagged ridges
+  xDimension 200
+  yDimension 200
+
+  # High octave count = lots of sharp micro-detail layered on macro jumps
+  randomSeed 42
+  perlinNOctaves 8
+
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/sand.jpg"
+      ]
+    }
+    baseColor 1.0 0.82 0.3
+    roughness 1
+    metalness 0
+  }
+}
+
+
+Robot {
+  name "falak"
+  controller "<extern>"
+  translation -2.0 0 15.0
+
+  children [
+
+    # =========================================================
+    # BASE MESH
+    # =========================================================
+    Transform {
+      scale 1 1 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25 0.25 0.25
+            roughness 0.5
+            metalness 0.2
+          }
+          geometry Mesh {
+            url "../meshes_1/base_link.STL"
+          }
+        }
+      ]
+    }
+
+    # =========================================================
+    # SENSORS
+    # =========================================================
+    InertialUnit {
+      name "imu"
+      translation 0 0 0.1
+    }
+    Accelerometer {
+      name "accelerometer"
+      translation 0 0 0.1
+    }
+    Gyro {
+      name "gyro"
+      translation 0 0 0.1
+    }
+    GPS {
+      name "gps"
+      translation 0 0 0.22
+    }
+    Camera {
+      name "oakd_rgb"
+      translation 0.45 0 0.15
+      width 640
+      height 480
+      fieldOfView 1.0472
+      near 0.1
+    }
+    RangeFinder {
+      name "oakd_depth"
+      translation 0.45 0 0.15
+      width 640
+      height 480
+      fieldOfView 1.0472
+      minRange 0.1
+      maxRange 10
+    }
+
+    # =========================================================
+    # WHEEL 1 - REAR RIGHT (directly on base, not on bogie)
+    # =========================================================
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 -1 0
+        anchor -0.37409 -0.2862 0.0066
+      }
+      device [
+        RotationalMotor {
+          name "wheel1_joint"
+          maxVelocity 20
+        }
+        PositionSensor {
+          name "wheel1_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.37409 -0.2862 0.0066
+        children [
+          Transform {
+            scale 1 1 1
+            children [
+              Shape {
+                castShadows TRUE
+                appearance PBRAppearance {
+                  baseColor 0.1 0.1 0.1
+                  roughness 1
+                }
+                geometry Mesh {
+                  url "../meshes_1/wheel1_link.STL"
+                }
+              }
+            ]
+          }
+        ]
+        contactMaterial "rover_wheel"
+        boundingObject Transform {
+          rotation 1 0 0 1.5708
+          translation 0 -0.07724 0
+          children [
+            Cylinder {
+              radius 0.1141
+              height 0.1194
+            }
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 4.0722
+        }
+      }
+    }
+
+    # =========================================================
+    # WHEEL 6 - REAR LEFT (directly on base, not on bogie)
+    # =========================================================
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.37192 0.2862 0.0035
+      }
+      device [
+        RotationalMotor {
+          name "wheel6_joint"
+          maxVelocity 20
+        }
+        PositionSensor {
+          name "wheel6_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.37192 0.2862 0.0035
+        children [
+          Transform {
+            scale 1 1 1
+            children [
+              Shape {
+                castShadows TRUE
+                appearance PBRAppearance {
+                  baseColor 0.1 0.1 0.1
+                  roughness 1
+                }
+                geometry Mesh {
+                  url "../meshes_1/wheel6_link.STL"
+                }
+              }
+            ]
+          }
+        ]
+        contactMaterial "rover_wheel"
+        boundingObject Transform {
+          translation 0 0.07724 0
+          rotation 1 0 0 1.5708
+          children [
+            Cylinder {
+              radius 0.1141
+              height 0.1194
+            }
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 4.0722
+        }
+      }
+    }
+
+    # =========================================================
+    # RIGHT ROCKER
+    # =========================================================
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.21016 -0.2862 0.1
+        springConstant 50.0
+        dampingConstant 10.0
+        minStop -0.4
+        maxStop  0.4
+      }
+
+      endPoint Solid {
+        translation 0.21016 -0.2862 0.1
+        children [
+
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 1 0
+              anchor 0 0 0
+              springConstant 30.0
+              dampingConstant 8.0
+              minStop -0.35
+              maxStop  0.35
+            }
+
+            endPoint Solid {
+              translation 0 0 0
+              children [
+
+                # WHEEL 2 - MID RIGHT
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 -1 0
+                    anchor -0.20944 0 -0.09341
+                  }
+                  device [
+                    RotationalMotor {
+                      name "wheel2_joint"
+                      maxVelocity 20
+                    }
+                    PositionSensor {
+                      name "wheel2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.20944 0 -0.09341
+                    children [
+                      Transform {
+                        scale 1 1 1
+                        children [
+                          Shape {
+                            castShadows TRUE
+                            appearance PBRAppearance {
+                              baseColor 0.1 0.1 0.1
+                              roughness 1
+                            }
+                            geometry Mesh {
+                              url "../meshes_1/wheel2_link.STL"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                    contactMaterial "rover_wheel"
+                    boundingObject Transform {
+                      translation 0 -0.07724 0
+                      rotation 1 0 0 1.5708
+                      children [
+                        Cylinder {
+                          radius 0.1141
+                          height 0.1194
+                        }
+                      ]
+                    }
+                    physics Physics {
+                      density -1
+                      mass 4.0722
+                    }
+                  }
+                }
+
+                # WHEEL 3 - FRONT RIGHT
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 -1 0
+                    anchor 0.20945 0 -0.09341
+                  }
+                  device [
+                    RotationalMotor {
+                      name "wheel3_joint"
+                      maxVelocity 20
+                    }
+                    PositionSensor {
+                      name "wheel3_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.20945 0 -0.09341
+                    children [
+                      Transform {
+                        scale 1 1 1
+                        children [
+                          Shape {
+                            castShadows TRUE
+                            appearance PBRAppearance {
+                              baseColor 0.1 0.1 0.1
+                              roughness 1
+                            }
+                            geometry Mesh {
+                              url "../meshes_1/wheel3_link.STL"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                    contactMaterial "rover_wheel"
+                    boundingObject Transform {
+                      rotation 1 0 0 1.5708
+                      translation 0 -0.07724 0
+                      children [
+                        Cylinder {
+                          radius 0.1141
+                          height 0.1194
+                        }
+                      ]
+                    }
+                    physics Physics {
+                      density -1
+                      mass 4.0722
+                    }
+                  }
+                }
+
+              ]
+              physics Physics {
+                density -1
+                mass 2.0
+              }
+            }
+          }
+
+        ]
+        physics Physics {
+          density -1
+          mass 2.0
+        }
+      }
+    }
+
+    # =========================================================
+    # LEFT ROCKER
+    # =========================================================
+    HingeJoint {
+      jointParameters HingeJointParameters {
+          axis 0 1 0
+          anchor 0.21016 0.2862 0.1
+          springConstant 50.0
+          dampingConstant 10.0
+          minStop -0.4
+          maxStop  0.4
+      }
+
+      endPoint Solid {
+        translation 0.20872 0.2862 0.1
+        children [
+
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 1 0
+                anchor 0 0 0
+                springConstant 30.0
+                dampingConstant 8.0
+                minStop -0.35
+                maxStop  0.35
+            }
+
+            endPoint Solid {
+              translation 0 0 0
+              children [
+
+                # WHEEL 4 - FRONT LEFT
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 0
+                    anchor 0.20944 0 -0.09414
+                  }
+                  device [
+                    RotationalMotor {
+                      name "wheel4_joint"
+                      maxVelocity 20
+                    }
+                    PositionSensor {
+                      name "wheel4_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.20944 0 -0.09414
+                    children [
+                      Transform {
+                        scale 1 1 1
+                        children [
+                          Shape {
+                            castShadows TRUE
+                            appearance PBRAppearance {
+                              baseColor 0.1 0.1 0.1
+                              roughness 1
+                            }
+                            geometry Mesh {
+                              url "../meshes_1/wheel4_link.STL"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                    contactMaterial "rover_wheel"
+                    boundingObject Transform {
+                      translation 0 0.07724 0
+                      rotation 1 0 0 1.5708
+                      children [
+                        Cylinder {
+                          radius 0.1141
+                          height 0.1194
+                        }
+                      ]
+                    }
+                    physics Physics {
+                      density -1
+                      mass 4.0722
+                    }
+                  }
+                }
+
+                # WHEEL 5 - MID LEFT
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 1 0
+                    anchor -0.20943 0 -0.09008
+                  }
+                  device [
+                    RotationalMotor {
+                      name "wheel5_joint"
+                      maxVelocity 20
+                    }
+                    PositionSensor {
+                      name "wheel5_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.20943 0 -0.09008
+                    children [
+                      Transform {
+                        scale 1 1 1
+                        children [
+                          Shape {
+                            castShadows TRUE
+                            appearance PBRAppearance {
+                              baseColor 0.1 0.1 0.1
+                              roughness 1
+                            }
+                            geometry Mesh {
+                              url "../meshes_1/wheel5_link.STL"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                    contactMaterial "rover_wheel"
+                    boundingObject Transform {
+                      translation 0 0.07724 0
+                      rotation 1 0 0 1.5708
+                      children [
+                        Cylinder {
+                          radius 0.1141
+                          height 0.1194
+                        }
+                      ]
+                    }
+                    physics Physics {
+                      density -1
+                      mass 4.0722
+                    }
+                  }
+                }
+
+              ]
+              physics Physics {
+                density -1
+                mass 2.0
+              }
+            }
+          }
+
+        ]
+        physics Physics {
+          density -1
+          mass 2.0
+        }
+      }
+    }
+
+  ]
+
+  contactMaterial "rover_body"
+
+  boundingObject Transform {
+    translation 0 0 0.1
+    children [
+      Box {
+        size 0.7 0.4 0.12
+      }
+    ]
+  }
+
+  physics Physics {
+    density -1
+    mass 17.34
+    damping Damping {
+      linear 0.3
+      angular 0.05
+    }
+  }
+}
