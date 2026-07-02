@@ -1,0 +1,23 @@
+[0.733s] Invoking command in '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/build --no-deps symlink_data
+[1.025s] running develop
+[1.228s] running egg_info
+[1.247s] writing webots_pkg_sim.egg-info/PKG-INFO
+[1.247s] writing dependency_links to webots_pkg_sim.egg-info/dependency_links.txt
+[1.247s] writing entry points to webots_pkg_sim.egg-info/entry_points.txt
+[1.247s] writing requirements to webots_pkg_sim.egg-info/requires.txt
+[1.247s] writing top-level names to webots_pkg_sim.egg-info/top_level.txt
+[1.287s] reading manifest file 'webots_pkg_sim.egg-info/SOURCES.txt'
+[1.288s] writing manifest file 'webots_pkg_sim.egg-info/SOURCES.txt'
+[1.309s] running build_ext
+[1.309s] Creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots-pkg-sim.egg-link (link to .)
+[1.309s] Installing costmap script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.309s] Installing costmap_lifecycle script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.310s] Installing falak_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.310s] Installing rover_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.310s] Installing swerve_g script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.310s] Installing vo_odom script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.310s] Installing webots_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.310s] 
+[1.310s] Installed /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim
+[1.310s] running symlink_data
+[1.344s] Invoked command in '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/build --no-deps symlink_data

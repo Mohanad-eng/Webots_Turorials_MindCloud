@@ -262,7 +262,7 @@
 
   <!-- Webots plugin -->
   <webots>
-    <plugin type="webots_pkg_sim.swerve_driver.RoverDriverSwerve"/>
+    <plugin type="webots_pkg_sim.webots_localization.RoverDriver"/>
   </webots>
 
 </robot>

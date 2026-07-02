@@ -76,7 +76,7 @@ Robot {
     Shape {
       castShadows FALSE
       appearance PBRAppearance { baseColor 0.2 0.2 0.8 roughness 0.5 metalness 0.3 }
-      geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/base_link.STL" }
+      geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/base_link.STL" }
     }
 
     # IMU sensors
@@ -130,7 +130,7 @@ Robot {
         anchor 0.34672 0.2949 0.041107
       }
       device [
-        RotationalMotor { name "steering1_joint" maxVelocity 1.0 minPosition -1.5708 maxPosition 1.5708 }
+        RotationalMotor { name "steering1_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 }
         PositionSensor  { name "steering1_sensor" }
       ]
       endPoint Solid {
@@ -140,7 +140,7 @@ Robot {
           Shape {
             castShadows FALSE
             appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
-            geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering1_Link.STL" }
+            geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering1_Link.STL" }
           }
           # ✅ FIX: wheel anchor is LOCAL to steering solid → use offset only
           HingeJoint {
@@ -159,12 +159,12 @@ Robot {
                 Shape {
                   castShadows FALSE
                   appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
-                  geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel1_Link.STL" }
+                  geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel1_Link.STL" }
                 }
               ]
               contactMaterial "rover_wheel"
               boundingObject DEF WHEEL1_BO Transform {
-              rotation 1 0 0 1.570808
+              rotation 1 0 0 1.5708
               children [ Cylinder { radius 0.086 height 0.1134 } ]
             }
               physics Physics { density -1 mass 1.0 }
@@ -183,7 +183,7 @@ Robot {
         anchor -0.34672 0.2949 0.041107
       }
       device [
-        RotationalMotor { name "steering2_joint" maxVelocity 1.0 minPosition -1.5708 maxPosition 1.5708 }
+        RotationalMotor { name "steering2_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 }
         PositionSensor  { name "steering2_sensor" }
       ]
       endPoint Solid {
@@ -193,7 +193,7 @@ Robot {
           Shape {
             castShadows FALSE
             appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
-            geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering2_Link.STL" }
+            geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering2_Link.STL" }
           }
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -211,12 +211,12 @@ Robot {
                 Shape {
                   castShadows FALSE
                   appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
-                  geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel2_Link.STL" }
+                  geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel2_Link.STL" }
                 }
               ]
               contactMaterial "rover_wheel"
               boundingObject DEF WHEEL2_BO Transform {
-              rotation 1 0 0 1.570808
+              rotation 1 0 0 1.5708
               children [ Cylinder { radius 0.086 height 0.1134 } ]
             }
               physics Physics { density -1 mass 1.0 }
@@ -235,7 +235,7 @@ Robot {
         anchor 0.34672 -0.2949 0.041107
       }
       device [
-        RotationalMotor { name "steering3_joint" maxVelocity 1.0 minPosition -1.5708 maxPosition 1.5708 }
+        RotationalMotor { name "steering3_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 }
         PositionSensor  { name "steering3_sensor" }
       ]
       endPoint Solid {
@@ -245,7 +245,7 @@ Robot {
           Shape {
             castShadows FALSE
             appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
-            geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering3_Link.STL" }
+            geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering3_Link.STL" }
           }
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -263,12 +263,12 @@ Robot {
                 Shape {
                   castShadows FALSE
                   appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
-                  geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel3_Link.STL" }
+                  geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel3_Link.STL" }
                 }
               ]
               contactMaterial "rover_wheel"
               boundingObject DEF WHEEL3_BO Transform {
-              rotation 1 0 0 1.570808
+              rotation 1 0 0 1.5708
               children [ Cylinder { radius 0.086 height 0.1134 } ]
             }
               physics Physics { density -1 mass 1.0 }
@@ -287,7 +287,7 @@ Robot {
         anchor -0.34672 -0.2949 0.041107
       }
       device [
-        RotationalMotor { name "steering4_joint" maxVelocity 1.0 minPosition -1.5708 maxPosition 1.5708 }
+        RotationalMotor { name "steering4_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 }
         PositionSensor  { name "steering4_sensor" }
       ]
       endPoint Solid {
@@ -297,7 +297,7 @@ Robot {
           Shape {
             castShadows FALSE
             appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
-            geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering4_Link.STL" }
+            geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering4_Link.STL" }
           }
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -315,12 +315,12 @@ Robot {
                 Shape {
                   castShadows FALSE
                   appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
-                  geometry Mesh { url "/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel4_Link.STL" }
+                  geometry Mesh { url "/home/ibrahim/falaker/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel4_Link.STL" }
                 }
               ]
               contactMaterial "rover_wheel"
               boundingObject DEF WHEEL4_BO Transform {
-              rotation 1 0 0 1.570808
+              rotation 1 0 0 1.5708
               children [ Cylinder { radius 0.086 height 0.1134 } ]
             }
               physics Physics { density -1 mass 1.0 }

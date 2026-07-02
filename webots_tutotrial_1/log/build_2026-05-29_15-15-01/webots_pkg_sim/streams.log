@@ -1,0 +1,28 @@
+[1.055s] Invoking command in '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/src/webots_pkg_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_pkg_sim build --build-base /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/build install --record /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/install.log --single-version-externally-managed install_data
+[1.300s] running egg_info
+[1.321s] writing ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/PKG-INFO
+[1.321s] writing dependency_links to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/dependency_links.txt
+[1.321s] writing entry points to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/entry_points.txt
+[1.321s] writing requirements to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/requires.txt
+[1.321s] writing top-level names to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/top_level.txt
+[1.363s] reading manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+[1.364s] writing manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+[1.364s] running build
+[1.364s] running build_py
+[1.364s] running install
+[1.369s] running install_lib
+[1.390s] running install_data
+[1.390s] copying worlds/falak.wbt -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+[1.391s] running install_egg_info
+[1.412s] removing '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim-0.0.0-py3.12.egg-info' (and everything under it)
+[1.413s] Copying ../../build/webots_pkg_sim/webots_pkg_sim.egg-info to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim-0.0.0-py3.12.egg-info
+[1.413s] running install_scripts
+[1.543s] Installing costmap script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.543s] Installing costmap_lifecycle script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.543s] Installing falak_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.543s] Installing rover_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.543s] Installing swerve_g script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.543s] Installing vo_odom script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.543s] Installing webots_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.544s] writing list of installed files to '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/install.log'
+[1.567s] Invoked command in '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/src/webots_pkg_sim' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_pkg_sim build --build-base /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/build install --record /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/install.log --single-version-externally-managed install_data

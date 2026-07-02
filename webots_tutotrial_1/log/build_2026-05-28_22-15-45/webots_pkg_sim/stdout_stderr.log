@@ -1,0 +1,66 @@
+running develop
+running egg_info
+creating webots_pkg_sim.egg-info
+writing webots_pkg_sim.egg-info/PKG-INFO
+writing dependency_links to webots_pkg_sim.egg-info/dependency_links.txt
+writing entry points to webots_pkg_sim.egg-info/entry_points.txt
+writing requirements to webots_pkg_sim.egg-info/requires.txt
+writing top-level names to webots_pkg_sim.egg-info/top_level.txt
+writing manifest file 'webots_pkg_sim.egg-info/SOURCES.txt'
+reading manifest file 'webots_pkg_sim.egg-info/SOURCES.txt'
+writing manifest file 'webots_pkg_sim.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots-pkg-sim.egg-link (link to .)
+Installing costmap script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+Installing costmap_lifecycle script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+Installing falak_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+Installing rover_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+Installing swerve_g script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+Installing vo_odom script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+Installing webots_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+
+Installed /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim
+running symlink_data
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index/resource_index
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index/resource_index/packages
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/resource/webots_pkg_sim -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index/resource_index/packages
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/package.xml -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/launch/swerve_launch.py -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/launch/falak.launch.py -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/launch/sim_rover_launch.py -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/launch/sim_launch.py -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/launch/gazebo_launch.py -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/urdf/swerve.urdf -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/urdf/robot.urdf -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/urdf/new_rover.urdf -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/urdf/gazebo_file.urdf -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/urdf/falak.urdf -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/worlds/rover_world.wbt -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/worlds/empty.wbt -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/worlds/world_falak.wbt -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/worlds/my_world.wbt -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/worlds/falak.wbt -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/config
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/config/controllers.yaml -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/config
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/steering1_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/wheel2_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/steering4_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/base_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/steering3_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/wheel4_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/wheel3_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/steering2_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes/wheel1_Link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes
+creating /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes_1/wheel6_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes_1/wheel2_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes_1/base_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes_1/wheel5_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes_1/wheel1_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes_1/wheel4_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1
+symbolically linking /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/meshes_1/wheel3_link.STL -> /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/meshes_1

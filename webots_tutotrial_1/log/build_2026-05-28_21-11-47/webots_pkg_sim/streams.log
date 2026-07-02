@@ -1,0 +1,27 @@
+[0.774s] Invoking command in '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/src/webots_pkg_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_pkg_sim build --build-base /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/build install --record /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/install.log --single-version-externally-managed install_data
+[1.045s] running egg_info
+[1.065s] writing ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/PKG-INFO
+[1.065s] writing dependency_links to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/dependency_links.txt
+[1.066s] writing entry points to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/entry_points.txt
+[1.066s] writing requirements to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/requires.txt
+[1.066s] writing top-level names to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/top_level.txt
+[1.107s] reading manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+[1.108s] writing manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+[1.108s] running build
+[1.108s] running build_py
+[1.108s] running install
+[1.113s] running install_lib
+[1.134s] running install_data
+[1.135s] running install_egg_info
+[1.157s] removing '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim-0.0.0-py3.12.egg-info' (and everything under it)
+[1.157s] Copying ../../build/webots_pkg_sim/webots_pkg_sim.egg-info to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim-0.0.0-py3.12.egg-info
+[1.157s] running install_scripts
+[1.289s] Installing costmap script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.289s] Installing costmap_lifecycle script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.289s] Installing falak_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.289s] Installing rover_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.290s] Installing swerve_g script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.290s] Installing vo_odom script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.290s] Installing webots_driver script to /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[1.290s] writing list of installed files to '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/install.log'
+[1.319s] Invoked command in '/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/src/webots_pkg_sim' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_pkg_sim build --build-base /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/build install --record /home/ibrahim/Webots_Turorials_MindCloud/webots_tutotrial_1/build/webots_pkg_sim/install.log --single-version-externally-managed install_data
